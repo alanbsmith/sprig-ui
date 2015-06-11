@@ -1,0 +1,207 @@
+<!doctype html>  
+<html lang='en' style="position: relative; min-height: 100%;">  
+  <head>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet'>
+  </head>
+  <body style='padding-top: 20px; margin-bottom: 120px;'>
+    <div class='container'>
+      <h1 style='font-weight: 200;'>Sprig UI</h1>
+      <p class='text-muted' style='font-weight: 200'>really easy scheduling</p>
+      <p class='notification' style='font-weight: 200; padding: 10px; visibility: hidden; color: #ffffff'></p>
+      <div class='panel-group' style='margin-bottom: 1px' id='accordion' role='tablist' aria-multiselectable='true'>
+        <!-- pick a time -->
+        <div class='panel panel-default' style='border-radius: 0'>
+          <div class='panel-heading' role='tab' id='calendar' style=' border-radius: 0; background-color: #00e59a; color: #ffffff'>
+            <h1 class='panel-title' style='font-weight: 200;'><a id='calendar-panel' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>
+          Calendar
+        </a></h1>
+          </div>
+          <div id='collapseOne' class='panel-collapse collapse' role='tabpanel' aria-labelledby='calendar'>
+            <div class='panel-body' align='center'>
+              <div class='col-xs-1' style='padding: 1px; width: 3.5%'><div class='glyphicon glyphicon-chevron-left' style='border-radius: 0; color: #00e59a; height: 47px; text-align: center; line-height: 48px;'></div></div>
+              <div class='col-xs-1' style='padding: 1px; width: 13%'><div class='thumbnail dates' style='border-radius: 0'><div class='caption' value='Sunday' style='text-align: center; font-weight: 200'>SUN</div></div></div>
+              <div class='col-xs-1' style='padding: 1px; width: 13%'><div class='thumbnail dates' style='border-radius: 0'><div class='caption' value='Monday' style='text-align: center; font-weight: 200'>MON</div></div></div>
+              <div class='col-xs-1' style='padding: 1px; width: 13%'><div class='thumbnail dates' style='border-radius: 0'><div class='caption' value='Tuesday' style='text-align: center; font-weight: 200'>TUE</div></div></div>
+              <div class='col-xs-1' style='padding: 1px; width: 13%'><div class='thumbnail dates' style='border-radius: 0'><div class='caption' value='Wednesday' style='text-align: center; font-weight: 200'>WED</div></div></div>
+              <div class='col-xs-1' style='padding: 1px; width: 13%'><div class='thumbnail dates' style='border-radius: 0'><div class='caption' value='Thursday' style='text-align: center; font-weight: 200'>THR</div></div></div>
+              <div class='col-xs-1' style='padding: 1px; width: 13%'><div class='thumbnail dates' style='border-radius: 0'><div class='caption' value='Friday' style='text-align: center; font-weight: 200'>FRI</div></div></div>
+              <div class='col-xs-1' style='padding: 1px; width: 13%'><div class='thumbnail dates' style='border-radius: 0'><div class='caption' value='Saturday' style='text-align: center; font-weight: 200'>SAT</div></div></div>
+              <div class='col-xs-1' style='padding: 1px; width: 3.5%'><div class='glyphicon glyphicon-chevron-right' style='border-radius: 0; color: #00e59a; height: 47px; text-align: center; line-height: 48px'></div></div>
+              <div class='panel' id='event' style='visibility: hidden; padding: 1px'><div class='panel-heading'><p style='font-weight: 200'>Availability</p></div>
+                <div class='panel-body' style='padding: 1px'>
+                  <div class='col-xs-3' style='padding: 1px'><div class='thumbnail times' style='border-radius: 0; margin-bottom: 0'><div class='caption' style='text-align: center; font-weight: 200'>8:00-9:00 AM</div></div></div>
+                  <div class='col-xs-3' style='padding: 1px'><div class='thumbnail times' style='border-radius: 0; margin-bottom: 0'><div class='caption' style='text-align: center; font-weight: 200'>9:00-10:00 AM</div></div></div>
+                  <div class='col-xs-3' style='padding: 1px'><div class='thumbnail times' style='border-radius: 0; margin-bottom: 0'><div class='caption' style='text-align: center; font-weight: 200'>10:00-11:00 AM</div></div></div>
+                  <div class='col-xs-3' style='padding: 1px'><div class='thumbnail times' style='border-radius: 0; margin-bottom: 0'><div class='caption' style='text-align: center; font-weight: 200'>11:00-12:00 PM</div></div></div>
+                  <div class='col-xs-3' style='padding: 1px'><div class='thumbnail times' style='border-radius: 0; margin-bottom: 0'><div class='caption' style='text-align: center; font-weight: 200'>1:00-2:00 PM</div></div></div>
+                  <div class='col-xs-3' style='padding: 1px'><div class='thumbnail times' style='border-radius: 0; margin-bottom: 0'><div class='caption' style='text-align: center; font-weight: 200'>2:00-3:00 PM</div></div></div>
+                  <div class='col-xs-3' style='padding: 1px'><div class='thumbnail times' style='border-radius: 0; margin-bottom: 0'><div class='caption' style='text-align: center; font-weight: 200'>3:00-4:00 PM</div></div></div>
+                  <div class='col-xs-3' style='padding: 1px'><div class='thumbnail times' style='border-radius: 0; margin-bottom: 0'><div class='caption' style='text-align: center; font-weight: 200'>4:00-5:00 PM</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- enter your info -->
+        <div class='panel panel-default' style='border-radius: 0'>
+          <div class='panel-heading' role='tab' id='information' style=' border-radius: 0; background-color: #00e59a; color: #ffffff'>
+            <h1 class='panel-title'  style='font-weight: 200;'>
+              <a id='information-panel' data-toggle='collapse' data-parent='#accordion' href='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo'>
+                Your Info
+              </a>
+            </h1>
+          </div>
+          <div id='collapseTwo' class='panel-collapse collapse' role='tabpanel' aria-labelledby='information'>
+            <div class='panel-body'>
+              <div class='col-xs-6'>
+              <p class='text-muted' style='font-weight: 200'>We'll need some information for your reservation.</p>
+              <p class='text-muted' style='font-weight: 200'>Don't worry. We'll confirm all the details in a bit.</p>
+                <div class='form-horizontal'>
+                  <input id='name' class='form-control' style='border-radius: 0; margin-bottom: 3px;' placeholder='Full name'></input>
+                  <input id='phone' class='form-control' style='border-radius: 0; margin-bottom: 3px;' placeholder='Phone number'></input>
+                  <input id='email' class='form-control' style='border-radius: 0; margin-bottom: 3px;' placeholder='Email address'></input>
+                  <button id='info-btn' class='btn btn-block' style='border-radius: 0; background-color: #00e59a; color: #ffffff'>Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- confirm appointment -->
+        <div class='panel panel-default' style='border-radius: 0'>
+          <div class='panel-heading' role='tab' id='confirmation' style=' border-radius: 0; background-color: #00e59a; color: #ffffff'>
+            <h1 class='panel-title'  style='font-weight: 200;'>
+              <a id='confirmation-panel' data-toggle='collapse' data-parent='#accordion' href='#collapseThree' aria-expanded='true' aria-controls='collapseThree'>
+                Confirm
+              </a>
+            </h1>
+          </div>
+          <div id='collapseThree' class='panel-collapse collapse' role='tabpanel' aria-labelledby='confirmation'>
+            <div class='panel-body'>
+              <h3 style='font-weight: 200'>Reservation Details:</h3>
+              <p class='text-muted' style='font-weight: 200' id='confirm-name'></p>
+              <p class='text-muted' style='font-weight: 200' id='confirm-phone'></p>
+              <p class='text-muted' style='font-weight: 200' id='confirm-email'></p>
+              <p class='text-muted' style='font-weight: 200' id='confirm-date'></p>
+              <button id='confirm-btn' class='btn' style='border-radius: 0; background-color: #00e59a; color: #ffffff'>Confirm</button>
+              <a id='edit-info' style='border-radius: 0; color: #00e59a;'> Need to edit info?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class='footer' style='position: absolute; bottom: 0; width: 100%; height: 100px; background-color: #262626; padding-top: 5px;'>
+      <div class='container'>
+        <a class='glyphicon gylphicon-lg glyphicon-chevron-down' style='color: #00e59a; display: block; text-align: center'></a>
+        <a id='about' style='color: #00e59a; padding-right: 10px; display: inline-block;'>About</a>
+        <a href="https://github.com/alanbsmith/" target="_blank" style='color: #00e59a; display: inline-block; padding-right: 10px%;'>View Source</a>
+        <h3 id="about" style='color: #00e59a; font-weight: 200;'>About</h3>
+        <p id="about" style='color: #ffffff; font-weight: 200;'>The goal of Sprig is to make coordinating events easy. Though the project is still very young, it's designed to be fast, simple, and intuitive. By removing a lot of extraneous information, you can choose options faster and get back to what's important to you.</p>
+      </div>
+    </footer>
+    <script src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+  </body>
+</html>
+<script>
+  // building a reservation object to send to another app.
+  var Reservation = {
+    personalInfo: {
+      name: '',
+      phone: '',
+      email: ''
+    },
+    appointmentInfo: {
+      date: '',
+      time: ''
+    }
+  };
+
+  var rpi = Reservation.personalInfo;
+  var rai = Reservation.appointmentInfo;
+
+  $('.panel-group').one('mouseenter',function() {
+    $('#calendar-panel').trigger('click');
+  })
+
+  $('.thumbnail').hover(function() {
+    $(this).css('background-color', '#e5e5e5');
+  }, function() {
+    $(this).css('background-color', '#ffffff');
+    $(this).children('.caption').css('color', '#262626');
+  });
+  
+  $('.dates').click(function() {
+    rai.date = $(this).children('.caption').attr('value');
+    $(this).css('background-color', '#00e59a');
+    $(this).children('.caption').css('color', '#ffffff');
+    return $('#event').css('visibility', function(i, visibility) {
+      return (visibility == 'visible') ? 'hidden' : 'visible';
+    });
+  });
+  
+  $('.times').on('click', function() {
+    $(this).css('background-color', '#00e59a');
+    $(this).children('.caption').css('color', '#ffffff');
+    rai.time = $(this).children('.caption').html();
+    $('p.notification').css('visibility', 'hidden');
+    $('#information-panel').trigger('click');
+  });
+
+  $('#calendar-panel').on('click', function() {
+    $('p.notification').css('visibility', 'hidden');
+    $('#event').css('visibility', 'hidden');
+  });
+
+  $('#info-btn').click(function() {
+    rpi.name = document.getElementById('name').value;
+    rpi.phone = document.getElementById('phone').value;
+    rpi.email = document.getElementById('email').value;
+    $('#confirm-name').text("Name: "   + rpi.name );
+    $('#confirm-phone').text("Phone: " + rpi.phone );
+    $('#confirm-email').text("Email: " + rpi.email );
+    $('#confirm-date').text("Your reservation is for: " + rai.date + " at " + rai.time + ".");
+    $('#confirmation-panel').trigger('click');
+  });
+
+  $('.glyphicon-chevron-left').click(function() {
+    $('p.notification').css('background-color', 'wheat');
+    $('p.notification').text("These don't do anything yet, but eventually they'll toggle through dates.");
+    $('p.notification').css('visibility', 'visible');
+  });
+
+  $('.glyphicon-chevron-right').click(function() {
+    $('p.notification').css('background-color', 'wheat');
+    $('p.notification').text("These don't do anything yet, but eventually they'll toggle through dates.");
+    $('p.notification').css('visibility', 'visible');
+  });
+
+  $('a#edit-info').click(function() {
+    $('#information-panel').trigger('click');
+  })
+
+  $('#confirm-btn').click(function() {
+    $('#confirmation-panel').trigger('click');
+    $('p.notification').css('background-color', '#5aeabb');
+    $('p.notification').text('All Done!');
+    $('p.notification').css('visibility', 'visible');
+  });
+
+  $('a#about').click(function() {
+    $('.footer').css('height', '80%');
+    $('h3#about').show();
+    $('p#about').show();
+  })
+
+  $('.glyphicon-chevron-down').click(function(){
+    $('.footer').css('height', '100px');
+    $('h3#about').hide();
+    $('p#about').hide();
+  })
+
+  $(document).on('ready', function() {
+    $('h3#about').hide();
+    $('p#about').hide();
+
+  })
+
+</script>
